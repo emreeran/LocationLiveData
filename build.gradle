@@ -1,0 +1,24 @@
+buildscript {
+    apply from: 'dependencies.gradle'
+
+    repositories {
+        google()
+        jcenter()
+    }
+    dependencies {
+        classpath deps.android_gradle_plugin
+        classpath deps.kotlin.plugin
+        classpath deps.navigation.safe_args_plugin
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
