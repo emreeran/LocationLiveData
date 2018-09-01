@@ -47,4 +47,7 @@ test.runner = "androidx.test:runner:$versions.test.runner"
 test.espresso_core = "androidx.test.espresso:espresso-core:$versions.test.espresso_core"
 dependencies.test = test
 
+dependencies.gradle_bintray_plugin = "com.jfrog.bintray.gradle:gradle-bintray-plugin:$versions.gradle_bintray_plugin"
+dependencies.android_maven_gradle_plugin = "com.github.dcendents:android-maven-gradle-plugin:$versions.android_maven_gradle_plugin"
+
 ext.deps = dependencies
