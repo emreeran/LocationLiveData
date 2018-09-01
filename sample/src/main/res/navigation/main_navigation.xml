@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/blue_fragment">
+
+    <fragment
+        android:id="@+id/red_fragment"
+        android:name="com.emreeran.locationlivedata.sample.RedFragment">
+        <action
+            android:id="@+id/show_blue"
+            app:clearTask="true"
+            app:destination="@id/blue_fragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/blue_fragment"
+        android:name="com.emreeran.locationlivedata.sample.BlueFragment">
+        <action
+            android:id="@+id/show_red"
+            app:clearTask="true"
+            app:destination="@id/red_fragment" />
+    </fragment>
+</navigation>
