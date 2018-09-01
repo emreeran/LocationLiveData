@@ -1,0 +1,41 @@
+apply plugin: 'com.github.dcendents.android-maven'
+
+group = projectProperties.groupId
+
+install {
+    repositories.mavenInstaller {
+        // This generates POM.xml with proper parameters
+        pom {
+            project {
+                packaging projectProperties.packaging
+                groupId projectProperties.groupId
+                artifactId projectProperties.artifact
+
+                name projectProperties.name
+                description projectProperties.description
+                url projectProperties.url
+
+                licenses {
+                    license {
+                        name projectProperties.license.name
+                        url projectProperties.license.url
+                    }
+                }
+
+                developers {
+                    developer {
+                        id projectProperties.developer.id
+                        name projectProperties.developer.name
+                        email projectProperties.developer.email
+                    }
+                }
+
+                scm {
+                    connection projectProperties.scm.connection
+                    developerConnection projectProperties.scm.developerConnection
+                    url projectProperties.scm.url
+                }
+            }
+        }
+    }
+}
