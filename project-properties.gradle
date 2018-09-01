@@ -1,0 +1,40 @@
+Properties developerProperties = new Properties()
+developerProperties.load(project.rootProject.file('developer.properties').newDataInputStream())
+
+def properties = [:]
+properties.name = 'LocationLiveData'
+properties.description = 'A simple LiveData implementation of Android Location API.'
+properties.url = 'https://github.com/emreeran/LocationLiveData'
+properties.groupId = 'com.emreeran.locationlivedata'
+properties.artifact = 'locationlivedata'
+properties.packaging = 'aar'
+
+def version = [:]
+version.code = 1
+version.name = '1.0.0'
+properties.version = version
+
+def sdk = [:]
+sdk.target = 28
+sdk.min = 16
+properties.sdk = sdk
+
+def license = [:]
+license.name = 'The Apache Software License, Version 2.0'
+license.url = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+license.all = ["Apache-2.0"]
+properties.license = license
+
+def developer = [:]
+developer.id = developerProperties.getProperty("id")
+developer.name = developerProperties.getProperty("name")
+developer.email = developerProperties.getProperty("email")
+properties.developer = developer
+
+def scm = [:]
+scm.connection = 'https://github.com/emreeran/LocationLiveData.git'
+scm.developerConnection = 'https://github.com/emreeran/LocationLiveData.git'
+scm.url = 'https://github.com/emreeran/LocationLiveData'
+properties.scm = scm
+
+ext.projectProperties = properties
