@@ -9,6 +9,8 @@ buildscript {
         classpath deps.android_gradle_plugin
         classpath deps.kotlin.plugin
         classpath deps.navigation.safe_args_plugin
+        classpath deps.gradle_bintray_plugin
+        classpath deps.android_maven_gradle_plugin
     }
 }
 
