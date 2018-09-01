@@ -1,15 +1,15 @@
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
+apply from: rootProject.file('project-properties.gradle')
 
 android {
-    compileSdkVersion 28
+    compileSdkVersion projectProperties.sdk.target
 
     defaultConfig {
-        minSdkVersion 16
-        targetSdkVersion 28
-        versionCode 1
-        versionName "1.0"
-
+        minSdkVersion projectProperties.sdk.min
+        targetSdkVersion projectProperties.sdk.target
+        versionCode projectProperties.version.code
+        versionName projectProperties.version.name
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -32,3 +32,6 @@ dependencies {
     implementation deps.kotlin.stdlib
     testImplementation deps.junit
 }
+
+apply from: rootProject.file('maven-install.gradle')
+apply from: rootProject.file('bintray-push.gradle')
