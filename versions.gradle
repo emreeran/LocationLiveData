@@ -1,7 +1,7 @@
 def versions = [:]
 
 // Gradle plugin
-versions.android_gradle_plugin = '3.3.0-alpha08'
+versions.android_gradle_plugin = "3.3.0-alpha08"
 
 // Kotlin
 versions.kotlin = "1.2.61"
@@ -28,5 +28,8 @@ def test = [:]
 test.runner = "1.1.0-alpha4"
 test.espresso_core = "3.1.0-alpha4"
 versions.test = test
+
+versions.gradle_bintray_plugin = "1.8.0"
+versions.android_maven_gradle_plugin = "1.5"
 
 ext.versions = versions
