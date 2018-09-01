@@ -1,0 +1,67 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: "androidx.navigation.safeargs"
+
+android {
+    compileSdkVersion 28
+
+    defaultConfig {
+        applicationId "com.emreeran.livedatalocation"
+        minSdkVersion 16
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    dataBinding {
+        enabled = true
+    }
+}
+
+dependencies {
+    // Library
+    implementation project(':library')
+
+    // Kotlin
+    implementation deps.kotlin.stdlib
+
+    implementation deps.app_compat
+    implementation deps.material
+    implementation deps.navigation.fragment
+    implementation deps.navigation.ui
+    implementation deps.navigation.fragment_ktx
+    implementation deps.navigation.ui_ktx
+    implementation deps.core_ktx
+    implementation deps.constraint_layout
+
+    implementation deps.play_services_location
+
+    // Lifecycle
+    implementation deps.lifecycle.runtime
+    implementation deps.lifecycle.extensions
+    implementation deps.lifecycle.java8
+
+    // Timber
+    implementation deps.timber
+
+    // Lifecycle
+    kapt deps.lifecycle.compiler
+
+    testImplementation deps.junit
+    androidTestImplementation deps.test.runner
+    androidTestImplementation deps.test.espresso_core
+}
