@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Sample</string>
+    <string name="coordinates">Latitude: %f\nLongitude: %f</string>
+    <string name="location_not_available">Location Not Available</string>
+</resources>
