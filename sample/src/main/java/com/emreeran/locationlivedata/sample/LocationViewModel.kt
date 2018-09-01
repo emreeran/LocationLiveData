@@ -10,7 +10,7 @@ import com.google.android.gms.location.LocationRequest
  */
 class LocationViewModel(application: Application) : AndroidViewModel(application) {
 
-    private var locationLiveData: LocationLiveData = LocationLiveData.create(
+    private val locationLiveData = LocationLiveData.create(
             application,
             interval = 100,
             priority = LocationRequest.PRIORITY_HIGH_ACCURACY
