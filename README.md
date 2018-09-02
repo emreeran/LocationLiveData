@@ -12,7 +12,7 @@ Add ```lifecycle-runtime``` and ```locationlivedata``` to your dependencies:
 dependencies {
 
     implementation "androidx.lifecycle:lifecycle-runtime:2.0.0-rc01"
-    implementation "com.emreeran.locationlivedata:locationlivedata:1.0.1"
+    implementation "com.emreeran.locationlivedata:locationlivedata:1.0.2"
 
     ...
 }
