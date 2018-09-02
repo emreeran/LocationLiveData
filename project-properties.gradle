@@ -27,12 +27,12 @@ properties.packaging = 'aar'
 
 def version = [:]
 version.code = 1
-version.name = '1.0.1'
+version.name = '1.0.2'
 properties.version = version
 
 def sdk = [:]
 sdk.target = 28
-sdk.min = 16
+sdk.min = 1
 properties.sdk = sdk
 
 def license = [:]
