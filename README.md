@@ -83,7 +83,7 @@ In Java:
 ```
 LocationLiveData locationLiveData = LocationLiveData.Companion.create(
         application,
-        500L,                                       //Interval
+        500L,                                       // Interval
         100L,                                       // Fastest interval
         LocationRequest.PRIORITY_HIGH_ACCURACY,     // Priority
         10F,                                        // Smallest displacement
