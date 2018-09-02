@@ -68,7 +68,7 @@ class LocationLiveData private constructor() : LiveData<Location>() {
                     it.getResult(ApiException::class.java)
                     locationClient.requestLocationUpdates(locationRequest, locationCallback, Looper.myLooper())
                 } catch (e: ApiException) {
-                    onErrorCallback?.onLocationSettingsException(e.statusCode)
+                    onErrorCallback?.onLocationSettingsException(e)
                 }
             }
         } else {
@@ -88,7 +88,7 @@ class LocationLiveData private constructor() : LiveData<Location>() {
          * [LocationSettingsStatusCodes.RESOLUTION_REQUIRED]
          * [LocationSettingsStatusCodes.SETTINGS_CHANGE_UNAVAILABLE]
          */
-        fun onLocationSettingsException(statusCode: Int)
+        fun onLocationSettingsException(e: ApiException)
 
         fun onPermissionsMissing()
     }
