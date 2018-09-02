@@ -106,7 +106,7 @@ class LocationLiveData private constructor() : LiveData<Location>() {
                 onErrorCallback: OnErrorCallback? = null
         ): LocationLiveData {
             val liveData = LocationLiveData()
-            val locationRequest = LocationRequest()
+            val locationRequest = LocationRequest.create()
 
             interval?.let { locationRequest.interval = it }
             fastestInterval?.let { locationRequest.fastestInterval = it }
