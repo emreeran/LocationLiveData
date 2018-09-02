@@ -27,7 +27,7 @@ properties.packaging = 'aar'
 
 def version = [:]
 version.code = 1
-version.name = '1.0.0'
+version.name = '1.0.1'
 properties.version = version
 
 def sdk = [:]
