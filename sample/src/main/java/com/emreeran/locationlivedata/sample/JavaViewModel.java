@@ -41,12 +41,7 @@ public class JavaViewModel extends AndroidViewModel {
                 application,
                 100L,
                 null,
-                LocationRequest.PRIORITY_HIGH_ACCURACY,
-                null,
-                null,
-                null,
-                null,
-                null
+                LocationRequest.PRIORITY_HIGH_ACCURACY
         );
     }
 
