@@ -94,6 +94,7 @@ class LocationLiveData private constructor() : LiveData<Location>() {
     }
 
     companion object {
+        @JvmOverloads
         fun create(
                 context: Context,
                 interval: Long? = null,
