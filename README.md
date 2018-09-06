@@ -5,14 +5,19 @@ A simple ```LiveData``` implementation of Android Location API.
 Uses ```FusedLocationProviderClient``` as location client.
 
 For more information on ```LiveData``` refer to this [link][livedata].
+
 ### Setup
-Add ```lifecycle-runtime``` and ```locationlivedata``` to your dependencies:
+Add lifecycle and ```locationlivedata``` to your dependencies:
 
 ```
 dependencies {
 
     implementation "androidx.lifecycle:lifecycle-runtime:2.0.0-rc01"
-    implementation "com.emreeran.locationlivedata:locationlivedata:1.0.2"
+    implementation "androidx.lifecycle:lifecycle-extensions:2.0.0-rc01"
+    implementation "androidx.lifecycle:lifecycle-common-java8:2.0.0-rc01"
+    kapt "androidx.lifecycle:lifecycle-compiler:2.0.0-rc01"
+
+    implementation "com.emreeran.locationlivedata:locationlivedata:1.0.3"
 
     ...
 }
@@ -81,7 +86,7 @@ locationLiveData.observe(this, Observer {   // Where this is a lifecycle owner
 In Java:
 
 ```
-LocationLiveData locationLiveData = LocationLiveData.Companion.create(
+LocationLiveData locationLiveData = LocationLiveData.create(
         application,
         500L,                                       // Interval
         100L,                                       // Fastest interval
@@ -135,7 +140,7 @@ file to you under the Apache License, Version 2.0 (the "License"); you may not
 use this file except in compliance with the License.  You may obtain a copy of
 the License at
 
-http://www.apache.org/licenses/LICENSE-2.0
+    http://www.apache.org/licenses/LICENSE-2.0
 
 Unless required by applicable law or agreed to in writing, software
 distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
