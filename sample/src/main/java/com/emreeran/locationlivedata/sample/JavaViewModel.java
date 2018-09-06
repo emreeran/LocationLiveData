@@ -37,7 +37,7 @@ public class JavaViewModel extends AndroidViewModel {
 
     public JavaViewModel(@NonNull Application application) {
         super(application);
-        locationLiveData = LocationLiveData.Companion.create(
+        locationLiveData = LocationLiveData.create(
                 application,
                 100L,
                 null,
