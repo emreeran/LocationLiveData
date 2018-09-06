@@ -55,7 +55,7 @@ android {
 
 dependencies {
     // Library
-    implementation project(':library')
+    implementation project(':locationlivedata')
 
     // Kotlin
     implementation deps.kotlin.stdlib
