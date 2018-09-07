@@ -1,5 +1,7 @@
 # LocationLiveData
 
+[![Android Arsenal]( https://img.shields.io/badge/Android%20Arsenal-LocationLiveData-green.svg?style=flat )]( https://android-arsenal.com/details/1/7096 )
+
 A simple ```LiveData``` implementation of Android Location API.
 
 Uses ```FusedLocationProviderClient``` as location client.
@@ -7,6 +9,16 @@ Uses ```FusedLocationProviderClient``` as location client.
 For more information on ```LiveData``` refer to this [link][livedata].
 
 ### Setup
+
+Add repository
+```
+repositories {
+    maven {
+        url  "https://dl.bintray.com/emre/maven"
+    }
+}
+```
+
 Add lifecycle and ```locationlivedata``` to your dependencies:
 
 ```
@@ -17,7 +29,7 @@ dependencies {
     implementation "androidx.lifecycle:lifecycle-common-java8:2.0.0-rc01"
     kapt "androidx.lifecycle:lifecycle-compiler:2.0.0-rc01"
 
-    implementation "com.emreeran.locationlivedata:locationlivedata:1.0.3"
+    implementation "com.emreeran.locationlivedata:locationlivedata:1.0.4"
 
     ...
 }
